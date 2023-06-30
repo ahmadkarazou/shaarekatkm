@@ -14,7 +14,7 @@ import 'screens/splash_screen.dart';
 import 'screens/swetcheUserOrOrg.dart';
 
 void main() async {
-   WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(const MyApp());
 }
@@ -40,7 +40,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return MultiProvider(
       providers: [
         ChangeNotifierProvider.value(value: Auth()),
@@ -52,13 +51,7 @@ class MyApp extends StatelessWidget {
             ),
         ChangeNotifierProxyProvider<Auth, Organtions>(
             create: (_) => Organtions(),
-            update: (ctx, authValue, preciousOrders) => preciousOrders
-            // ..getData(
-            //   authValue.token,
-            //   preciousOrders.userId,
-            //   preciousOrders == null ? null : preciousOrders.orders,
-            // ),
-            ),
+            update: (ctx, authValue, preciousOrders) => preciousOrders),
       ],
       child: Consumer<Auth>(
         builder: (ctx, auth, _) => MaterialApp(
@@ -75,13 +68,12 @@ class MyApp extends StatelessWidget {
               //     builder: (ctx, AsyncSnapshot authSnapshot) =>
               //         authSnapshot.connectionState == ConnectionState.waiting
               //             ? SplashScreen()
-                          : Login(),
-                //),
+              : Login(),
+          //),
           routes: {
-            
             Home.routeName: (_) => const Home(),
             SwetchUOrO.routeName: (_) => SwetchUOrO(),
-           // OrgPage.routeName: (_) => const OrgPage(),
+            // OrgPage.routeName: (_) => const OrgPage(),
             InpoutOrg.routeName: (_) => const InpoutOrg(),
             ParsonalPage.routeName: (_) => const ParsonalPage(),
           },
