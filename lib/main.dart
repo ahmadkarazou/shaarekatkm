@@ -61,15 +61,7 @@ class MyApp extends StatelessWidget {
             accentColor: Colors.deepOrange,
             fontFamily: 'Lato',
           ),
-          home: auth.isAuth
-              ? Home()
-              // : FutureBuilder(
-              //     future: auth.tryAutoLogin(),
-              //     builder: (ctx, AsyncSnapshot authSnapshot) =>
-              //         authSnapshot.connectionState == ConnectionState.waiting
-              //             ? SplashScreen()
-              : Login(),
-          //),
+          home: auth.isAuth ? Home() : Login(),
           routes: {
             Home.routeName: (_) => const Home(),
             SwetchUOrO.routeName: (_) => SwetchUOrO(),
