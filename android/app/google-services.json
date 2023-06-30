@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "613953324605",
+    "project_id": "sharekatcom",
+    "storage_bucket": "sharekatcom.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613953324605:android:efd2eccbe45a86fc108c54",
+        "android_client_info": {
+          "package_name": "com.example.shaarekatkm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613953324605-pld3db62t6mtnagjsv84euk35vr7a7l0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDw3IJGIAV9qNRixteBfw16L0Wz3gNlW9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "613953324605-pld3db62t6mtnagjsv84euk35vr7a7l0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
